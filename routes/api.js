@@ -8,7 +8,7 @@ var zahirr = db.get("zahirr");
 	console.log('')
 }
 
-var creatorList = ['@zahirrr','@zhirrrgans','@zhirr_ajalah','@zahiranjay', '@zahirganssss','@zhirrganteng','@zahirrgantengg', '@hafizh'];
+var creatorList = ['@sofyanamv','@sofyann','@amv_sofyan','@sofyan_amv'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
 
@@ -163,7 +163,7 @@ var len = 15
 router.get('/find', async (req, res, next) => {
     var apikey = req.query.apikey
     if (!apikey) return res.json(loghandler.notparam)
-    if (apikey != 'zahirgans') return res.json(loghandler.invalidKey)
+    if (apikey != 'ChikaWangyy') return res.json(loghandler.invalidKey)
 
     try {
         zahirr.find()
@@ -263,7 +263,7 @@ router.get('/remove', (req, res, next) => {
 
     if (!apikey) return res.json(loghandler.notparam)
     if (!(status && apikeyInput && email && nomorhp && name && age && country && exp)) return res.json(loghandler.notAddApiKey)
-    if (apikey != 'zahirgans') return res.json(loghandler.invalidKey)
+    if (apikey != 'ChikaWangyy') return res.json(loghandler.invalidKey)
 
     try {
         zahirr.remove({
@@ -295,7 +295,7 @@ router.get('/tiktod', async (req, res, next) => {
 
 
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ChikaWangyy') return res.json(loghandler.invalidKey)
      if (!url) return res.json(loghandler.noturl)
 
      TikTokScraper.getVideoMeta(url, options)
@@ -427,7 +427,7 @@ router.get('/short/tiny', async (req, res, next) => {
         url = req.query.url
 
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ChikaWangyy') return res.json(loghandler.invalidKey)
      if (!url) return res.json(loghandler.noturl)
 
      request(`https://tinyurl.com/api-create.php?url=${url}`, function (error, response, body) {
